@@ -1,5 +1,6 @@
-# UnitySwift
+# Unity Swift
 
+xcode无需任何配置，即可完成Unity和IOS native界面的相互切换，使用swift语言和storyboard。
 参考自https://github.com/miyabi/unity-swift
 
 ## 功能
@@ -18,9 +19,9 @@
 主要使用了PostProcessBuild做了一些后期处理，参考 [PostProcessor.cs](./Assets/UnitySwift/Editor/PostProcessor.cs)。
 具体请参考：https://github.com/miyabi/unity-swift
 
-## Unity和native界面相互切换
+## Unity和ios native界面相互切换
 1. 新建UnitySubAppController.swift文件，继承UnityAppController，接管Unity的启动，将Unity的ViewController保存下来，有了ViewController，后面就方面做页面的跳转操作了，参考[UnitySubAppController.swift](./Assets/UnitySwift/UnitySubAppController.swift)
-2. 通过PostProcessor修改xcode工程中main.mm，改变启动的UnityAppController为UnitySubAppController
+2. 通过 [PostProcessor.cs](./Assets/UnitySwift/Editor/PostProcessor.cs)修改xcode工程中main.mm，改变启动的UnityAppController为UnitySubAppController
 ```csharp
 private static void ModifyMainFile(string buildPath)
 {
