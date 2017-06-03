@@ -15,4 +15,4 @@
 3. 神奇的地方在这里，无需任何配置，直接运行
 
 ## 原理
-主要使用了PostProcessBuild做了一些后期处理，参考 [PostProcessor.cs](./UnitySwift/Assets/UnitySwift/Editor/PostProcessor.cs)
+主要使用了PostProcessBuild做了一些后期处理，参考 [PostProcessor.cs](./Assets/UnitySwift/Editor/PostProcessor.cs)
