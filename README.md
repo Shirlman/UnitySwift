@@ -22,6 +22,7 @@ xcode无需任何配置，即可完成Unity和IOS native界面的相互切换，
 具体请参考：https://github.com/miyabi/unity-swift
 
 ## Unity和ios native界面相互切换
+下面是实现思路：
 1. 新建UnitySubAppController.swift文件，继承UnityAppController，接管Unity的启动，将Unity的ViewController保存下来，有了ViewController，后面就方面做页面的跳转操作了，参考[UnitySubAppController.swift](./Assets/UnitySwift/UnitySubAppController.swift)
 2. 通过 [PostProcessor.cs](./Assets/UnitySwift/Editor/PostProcessor.cs)修改xcode工程中main.mm，改变启动的UnityAppController为UnitySubAppController
 ```csharp
